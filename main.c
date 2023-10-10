@@ -2,7 +2,7 @@
 #include <string.h>
 
 void TrimRight(char* s){
-    char *s2 = s;
+    /*char *s2 = s;
     int counter = 0;
     while (*s2 == ' '){
         s2++;
@@ -21,7 +21,14 @@ void TrimRight(char* s){
         *s = *(s + counter);
         s++;
     }
-    *s = 0;
+    *s = 0;*/
+    char* right = s;
+    while(*s){
+        if(*s != ' ')
+            right = s + 1;
+        s++;
+    }        
+    *right = 0;
 }
 
 int main(){
